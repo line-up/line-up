@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+*.map
+
+# NPM
+node_modules
+package-lock.json
+npm-shrinkwrap.json
+
+# VSCode
+.vscode/

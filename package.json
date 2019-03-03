@@ -1,16 +1,10 @@
 {
-  "name": "line-up",
-  "version": "0.0.1",
-  "description": "Cross-Platform Design System",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/line-up/line-up.git"
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "react": "^16.8.1"
   },
-  "keywords": [],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/line-up/line-up/issues"
-  },
-  "homepage": "https://github.com/line-up/line-up#readme"
+  "license": "MIT"
 }
