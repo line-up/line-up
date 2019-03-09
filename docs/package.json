@@ -1,0 +1,14 @@
+{
+  "name": "@lineup/docs",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --no-inline"
+  },
+  "dependencies": {
+    "@lineup/web": "0.0.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@lineup/web",
+  "version": "0.0.1",
+  "description": "Web Components",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "react": "^16.8.1"
+  }
+}
