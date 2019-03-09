@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 const sourcePath = path.join(__dirname, 'src');
 const packagesPath = path.join(__dirname, '../packages');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   mode: 'development',
@@ -25,14 +26,39 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          'babel-loader',
+          {
+            loader: 'linaria/loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          }
+        ],
         include: [packagesPath, sourcePath],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          },
+        ],
       },
     ],
   },
-  plugins: [new webpack.NamedModulesPlugin()],
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    })
+  ],
   devServer: {
     compress: false,
     host: '0.0.0.0',

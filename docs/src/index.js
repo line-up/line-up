@@ -2,20 +2,27 @@ import React, { Fragment, useState } from 'react';
 import { render } from 'react-dom';
 
 // TODO: Fix workspace link
-import { Button, ThemeProvider } from '../../packages/web';
+import { Button } from '../../packages/web';
+import { ThemeProvider, dark, light } from '../../packages/themes';
+
+const themeMap = {dark, light};
 
 function App() {
-  const [ theme, setTheme ] = useState('default');
+  const [ theme, setTheme ] = useState('light');
   return (
     <Fragment>
-      <select value={theme} onChange={value => setTheme(value)}>
-        <option value='default'>Default</option>
-        <option value='carbon'>Carbon</option>
-        <option value='pristine'>Pristine</option>
-      </select>
-      <ThemeProvider theme={theme}>
-        <Button>My Great Button</Button>
-      </ThemeProvider>
+      <p>
+        Theme Select:
+        <select onChange={ev => setTheme(ev.target.value)}>
+          <option value='light'>Light</option>
+          <option value='dark'>Dark</option>
+        </select>
+      </p>
+      <div className='container'>
+        <ThemeProvider theme={themeMap[theme]}>
+          <Button>My Great Button</Button>
+        </ThemeProvider>
+      </div>
     </Fragment>
   );
 }
