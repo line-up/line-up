@@ -1,29 +1,38 @@
 import React from 'react';
-import { css } from 'linaria';
+import { css } from 'emotion';
+import styled from '@emotion/styled';
 import { useTheme, light } from '../../themes';
 
 const buttonClassName = css`
-  background-color: black;
   border: none;
-  color: white;
-  padding: 15px 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  &:hover: {
+    opacity: 0.6;
+  }
+`;
+
+const StyledButton = styled.button`
+  color: ${({ color }) => color};
+  background-color: ${({ backgroundColor }) => backgroundColor};
 `;
 
 function Button({ onClick, children }) {
-  const { colors: { primary, secondary } } = useTheme();
+  const {
+    colors: { primary, secondary }
+  } = useTheme();
 
+  const colorMap = { color: primary, backgroundColor: secondary };
   return (
-    <div
-      className={buttonClassName}
-      onClick={onClick}
-      style={{ color: primary, backgroundColor: secondary }}
-    >
+    <StyledButton className={buttonClassName} onClick={onClick} {...colorMap}>
       {children}
-    </div>
+    </StyledButton>
   );
 }
 
