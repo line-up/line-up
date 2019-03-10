@@ -9,3 +9,7 @@ npm-shrinkwrap.json
 
 # VSCode
 .vscode/
+
+#docs
+.cache
+dist
