@@ -3,11 +3,29 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --no-inline"
+    "build": "parcel",
+    "start": "parcel index.html --open"
   },
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
+  },
+  "babel": {
+    "presets": [
+      "linaria/babel",
+      "@babel/preset-flow",
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
   }
 }
