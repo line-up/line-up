@@ -1,0 +1,10 @@
+export const fontSize = 16;
+export const lineHeight = fontSize * 1.5;
+export const baseLine = lineHeight / 2;
+export const blockSpacingTop = 0;
+export const blockSpacingBottom = lineHeight * 1;
+export const hrThickness = 2;
+export const columnGap = lineHeight;
+export const rowGap = lineHeight;
+export const displayScale = 1;
+export const pixel = 1;
