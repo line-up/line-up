@@ -1,7 +1,7 @@
-import React from 'react';
-import { css } from 'emotion';
-import styled from '@emotion/styled';
-import { useTheme, light } from '../../themes';
+import React from "react";
+import { css } from "emotion";
+import styled from "@emotion/styled";
+import { useTheme, light } from "../../themes";
 
 const buttonClassName = css`
   border: none;
@@ -23,7 +23,7 @@ const StyledButton = styled.button`
   background-color: ${({ backgroundColor }) => backgroundColor};
 `;
 
-function Button({ onClick, children }) {
+export function Button({ onClick, children }) {
   const {
     colors: { primary, secondary }
   } = useTheme();
@@ -35,5 +35,3 @@ function Button({ onClick, children }) {
     </StyledButton>
   );
 }
-
-export default Button;

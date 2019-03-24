@@ -1,3 +1,2 @@
-import ButtonComponent from './components/Button';
-
-export const Button = ButtonComponent;
+export * from "./components/Button";
+export * from "./components/Grid";
