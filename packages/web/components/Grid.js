@@ -16,7 +16,7 @@ const gridCss = css`
 const StyledGrid = styled.div`
   ${props => mapProp(props.columns, "column", props.bp)}
   ${props => `--col-gap: ${props.colGap}px;`}
-  ${props => `--col-gap: ${props.rowGap}px;`}
+  ${props => `--row-gap: ${props.rowGap}px;`}
   ${props => `--mt: ${props.mt}px;`}
   ${props => `--mb: ${props.mb}px;`}
 `;
