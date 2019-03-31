@@ -6,10 +6,8 @@ import LightTheme from './themes/light';
 const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
-export const ThemeProvider = ({theme, children}) =>(
-  <ThemeContext.Provider value={theme}>
-    {children}
-  </ThemeContext.Provider>
+export const ThemeProvider = ({theme, children}) => (
+  <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 );
 
 // Themes

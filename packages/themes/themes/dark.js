@@ -1,11 +1,11 @@
-import * as baseTheme from "./base";
+import * as baseTheme from './base';
 
 const darkTheme = {
   colors: {
-    primary: "white",
-    secondary: "black"
+    primary: 'white',
+    secondary: 'black',
   },
-  ...baseTheme
+  ...baseTheme,
 };
 
 export default darkTheme;

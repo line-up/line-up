@@ -1,14 +1,14 @@
-import React, { Fragment, useState } from "react";
-import { render } from "react-dom";
+import React, {Fragment, useState} from 'react';
+import {render} from 'react-dom';
 
 // TODO: Fix workspace link
-import { Button, Grid } from "../../packages/web";
-import { ThemeProvider, dark, light } from "../../packages/themes";
+import {Button, Grid} from '../../packages/web';
+import {ThemeProvider, dark, light} from '../../packages/themes';
 
-const themeMap = { dark, light };
+const themeMap = {dark, light};
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
   return (
     <Fragment>
       <p>
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-render(<App />, document.querySelector("#root"));
+render(<App />, document.querySelector('#root'));

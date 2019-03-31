@@ -9,8 +9,8 @@ export const rowGap = lineHeight;
 export const displayScale = 1;
 export const pixel = 1;
 export const breakpoints = [
-  "@media (min-width: 768px)",
-  "@media (min-width: 1024px)",
-  "@media (min-width: 1280px)",
-  "@media (min-width: 1536px)"
+  '@media (min-width: 768px)',
+  '@media (min-width: 1024px)',
+  '@media (min-width: 1280px)',
+  '@media (min-width: 1536px)',
 ];

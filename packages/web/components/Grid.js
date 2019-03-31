@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "emotion";
-import styled from "@emotion/styled";
-import { useTheme, light } from "../../themes";
-import { mapProp } from "../utils";
+import React from 'react';
+import {css} from 'emotion';
+import styled from '@emotion/styled';
+import {useTheme, light} from '../../themes';
+import {mapProp} from '../utils';
 
 const gridCss = css`
   display: grid;
@@ -14,20 +14,20 @@ const gridCss = css`
 `;
 
 const StyledGrid = styled.div`
-  ${props => mapProp(props.columns, "column", props.bp)}
+  ${props => mapProp(props.columns, 'column', props.bp)}
   ${props => `--col-gap: ${props.colGap}px;`}
   ${props => `--row-gap: ${props.rowGap}px;`}
   ${props => `--mt: ${props.mt}px;`}
   ${props => `--mb: ${props.mb}px;`}
 `;
 
-export function Grid({ columns = [1, 2, 3], className = "", children }) {
+export function Grid({columns = [1, 2, 3], className = '', children}) {
   const {
     columnGap,
     rowGap,
     breakpoints,
     blockSpacingBottom,
-    blockSpacingTop
+    blockSpacingTop,
   } = useTheme();
 
   return (
@@ -38,8 +38,7 @@ export function Grid({ columns = [1, 2, 3], className = "", children }) {
       rowGap={rowGap}
       mt={blockSpacingTop}
       mb={blockSpacingBottom}
-      className={`l-grid ${gridCss} ${className}`}
-    >
+      className={`l-grid ${gridCss} ${className}`}>
       {children}
     </StyledGrid>
   );

@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "emotion";
-import styled from "@emotion/styled";
-import { useTheme, light } from "../../themes";
-import { mapProp } from "../utils";
+import React from 'react';
+import {css} from 'emotion';
+import styled from '@emotion/styled';
+import {useTheme, light} from '../../themes';
+import {mapProp} from '../utils';
 
 const columnCss = css`
   display: block;
@@ -13,25 +13,24 @@ const columnCss = css`
 `;
 
 const StyledColumn = styled.div`
-  ${props => mapProp(props.start, "start", props.bp)}
-  ${props => mapProp(props.end, "end", props.bp)}
+  ${props => mapProp(props.start, 'start', props.bp)}
+  ${props => mapProp(props.end, 'end', props.bp)}
 `;
 
 export function Column({
   start = [1, 2, 3],
   end = [1, 2, 3],
-  className = "",
-  children
+  className = '',
+  children,
 }) {
-  const { breakpoints } = useTheme();
+  const {breakpoints} = useTheme();
 
   return (
     <StyledColumn
       start={start}
       end={end}
       bp={breakpoints}
-      className={`l-col ${columnCss} ${className}`}
-    >
+      className={`l-col ${columnCss} ${className}`}>
       {children}
     </StyledColumn>
   );

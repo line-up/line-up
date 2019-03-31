@@ -1,7 +1,7 @@
-import React from "react";
-import { css } from "emotion";
-import styled from "@emotion/styled";
-import { useTheme, light } from "../../themes";
+import React from 'react';
+import {css} from 'emotion';
+import styled from '@emotion/styled';
+import {useTheme, light} from '../../themes';
 
 const buttonClassName = css`
   border: none;
@@ -19,16 +19,16 @@ const buttonClassName = css`
 `;
 
 const StyledButton = styled.button`
-  color: ${({ color }) => color};
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: ${({color}) => color};
+  background-color: ${({backgroundColor}) => backgroundColor};
 `;
 
-export function Button({ onClick, children }) {
+export function Button({onClick, children}) {
   const {
-    colors: { primary, secondary }
+    colors: {primary, secondary},
   } = useTheme();
 
-  const colorMap = { color: primary, backgroundColor: secondary };
+  const colorMap = {color: primary, backgroundColor: secondary};
   return (
     <StyledButton className={buttonClassName} onClick={onClick} {...colorMap}>
       {children}
