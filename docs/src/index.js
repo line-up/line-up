@@ -20,7 +20,14 @@ function App() {
       </p>
       <div className="container">
         <ThemeProvider theme={themeMap[theme]}>
-          <Grid>
+          <Grid
+            gridGap="2em"
+            gridTemplateColumns={[
+              "repeat(1, 1fr)",
+              "repeat(2, 2fr)",
+              "repeat(3, 3fr)"
+            ]}
+          >
             <Button>My Great Button</Button>
             <Button>My Great Button</Button>
             <Button>My Great Button</Button>
