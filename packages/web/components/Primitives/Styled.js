@@ -73,6 +73,8 @@ import {
   left,
   // Misc
   buttonStyle,
+  textStyle,
+  colorStyle,
   variant
 } from "styled-system";
 
@@ -185,5 +187,18 @@ export const StyledButton = styled("button")(
   borderWidth,
   borderStyle,
   borderColor,
-  borderRadius
+  borderRadius,
+  color
+);
+
+export const StyledText = styled("p")(
+  color,
+  fontSize,
+  fontWeight,
+  fontFamily,
+  textAlign,
+  lineHeight,
+  letterSpacing,
+  space,
+  textStyle
 );

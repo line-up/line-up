@@ -1,6 +1,8 @@
 import * as baseTheme from "./base";
-
+const colors = baseTheme.colors;
+const fontSizes = baseTheme.fontSizes;
 const darkTheme = {
+  ...baseTheme,
   buttons: {
     primary: {
       fontSize: baseTheme.fontSizes[1],
@@ -15,7 +17,28 @@ const darkTheme = {
       }
     }
   },
-  ...baseTheme
+  textStyles: {
+    h1: {
+      color: colors.white,
+      fontSize: fontSizes[6]
+    },
+    h2: {
+      color: colors.white,
+      fontSize: fontSizes[5]
+    },
+    h3: {
+      color: colors.white,
+      fontSize: fontSizes[4]
+    },
+    h4: {
+      color: colors.white,
+      fontSize: fontSizes[3]
+    },
+    text: {
+      color: colors.white,
+      fontSize: fontSizes[2]
+    }
+  }
 };
 
 export default darkTheme;

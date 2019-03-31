@@ -15,5 +15,43 @@ export const colors = {
   blue: "blue",
   green: "green",
   red: "red",
-  black: "black"
+  black: "#222"
+};
+
+export const textStyles = {
+  h1: {
+    color: colors.black,
+    fontSize: fontSizes[6]
+  },
+  h2: {
+    color: colors.black,
+    fontSize: fontSizes[5]
+  },
+  h3: {
+    color: colors.black,
+    fontSize: fontSizes[4]
+  },
+  h4: {
+    color: colors.black,
+    fontSize: fontSizes[3]
+  },
+  text: {
+    color: colors.black,
+    fontSize: fontSizes[2]
+  }
+};
+
+export const buttons = {
+  primary: {
+    fontSize: fontSizes[1],
+    color: colors.white,
+    textTransform: "uppercase",
+    backgroundColor: colors.black,
+    border: 0,
+    height: 48,
+    transition: "opacity .3s ease-in-out",
+    "&:hover": {
+      opacity: 0.8
+    }
+  }
 };
