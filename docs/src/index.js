@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { render } from "react-dom";
 
 // TODO: Fix workspace link
-import { Button, Grid, Base } from "../../packages/web";
+import { Base, Button, Grid, Heading, Text } from "../../packages/web";
 import { ThemeProvider, dark, light } from "../../packages/themes";
 
 const themeMap = { dark, light };
@@ -23,7 +23,19 @@ function App() {
         style={{ backgroundColor: theme !== "light" ? "#000" : "#fff" }}
       >
         <ThemeProvider theme={themeMap[theme]}>
-          <Base>Test</Base>
+          <Base mb={24}>
+            <Heading tag="h1" textStyle="h1">
+              Heading 1
+            </Heading>
+            <Heading tag="h2" textStyle="h2">
+              Heading 2
+            </Heading>
+            <Heading tag="h3" textStyle="h3">
+              Heading 3
+            </Heading>
+            <Heading textStyle="h4">Heading 3</Heading>
+            <Text>Text</Text>
+          </Base>
           <Grid
             gridGap="2em"
             gridTemplateColumns={[
