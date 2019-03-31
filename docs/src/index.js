@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { render } from "react-dom";
 
 // TODO: Fix workspace link
-import { Button, Grid } from "../../packages/web";
+import { Button, Grid, Base } from "../../packages/web";
 import { ThemeProvider, dark, light } from "../../packages/themes";
 
 const themeMap = { dark, light };
@@ -18,15 +18,26 @@ function App() {
           <option value="dark">Dark</option>
         </select>
       </p>
-      <div className="container">
+      <div
+        className="container"
+        style={{ backgroundColor: theme !== "light" ? "#000" : "#fff" }}
+      >
         <ThemeProvider theme={themeMap[theme]}>
-          <Grid>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
+          <Base>Test</Base>
+          <Grid
+            gridGap="2em"
+            gridTemplateColumns={[
+              "repeat(1, 1fr)",
+              "repeat(2, 2fr)",
+              "repeat(3, 3fr)"
+            ]}
+          >
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
           </Grid>
         </ThemeProvider>
       </div>
