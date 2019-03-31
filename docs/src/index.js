@@ -18,7 +18,10 @@ function App() {
           <option value="dark">Dark</option>
         </select>
       </p>
-      <div className="container">
+      <div
+        className="container"
+        style={{ backgroundColor: theme !== "light" ? "#000" : "#fff" }}
+      >
         <ThemeProvider theme={themeMap[theme]}>
           <Base>Test</Base>
           <Grid
@@ -29,12 +32,12 @@ function App() {
               "repeat(3, 3fr)"
             ]}
           >
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
-            <Button>My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
+            <Button variant="primary">My Great Button</Button>
           </Grid>
         </ThemeProvider>
       </div>

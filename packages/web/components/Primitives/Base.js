@@ -4,5 +4,5 @@ import { useTheme } from "../../../themes";
 
 export function Base(props) {
   const theme = useTheme();
-  return <StyledBase theme={theme} m={2} {...props} />;
+  return <StyledBase theme={theme} {...props} />;
 }

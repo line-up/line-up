@@ -157,10 +157,19 @@ export const StyledFlex = styled("div")(
   alignSelf,
   order,
   flexBasis,
-  space
+  space,
+  width,
+  maxWidth,
+  minWidth,
+  height,
+  maxHeight,
+  minHeight
 );
 
 export const StyledButton = styled("button")(
+  {
+    cursor: "pointer"
+  },
   borders,
   borderRadius,
   buttonStyle,
