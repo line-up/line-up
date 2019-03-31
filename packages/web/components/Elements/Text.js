@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledText } from "../Primitives";
-import { useTheme } from "../../../themes";
+import React from 'react';
+import {StyledText} from '../Primitives';
+import {useTheme} from '../../../themes';
 
 export function Text(props) {
   const theme = useTheme();
