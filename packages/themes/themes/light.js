@@ -1,4 +1,4 @@
-import * as baseTheme from "./base";
+import * as baseTheme from './base';
 
 const lightTheme = baseTheme;
 

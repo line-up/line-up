@@ -1,6 +1,6 @@
-import React, { createContext, useContext } from "react";
-import DarkTheme from "./themes/dark";
-import LightTheme from "./themes/light";
+import React, {createContext, useContext} from 'react';
+import DarkTheme from './themes/dark';
+import LightTheme from './themes/light';
 
 // Theme Provider
 const ThemeContext = createContext();
@@ -9,7 +9,7 @@ export const withTheme = Wrapped => props => (
   <Wrapped theme={useTheme()} {...props} />
 );
 
-export const ThemeProvider = ({ theme, children }) => (
+export const ThemeProvider = ({theme, children}) => (
   <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 );
 
