@@ -1,9 +1,9 @@
 import React from "react";
-import { css } from "emotion";
 import styled from "@emotion/styled";
-import { useTheme, light } from "../../themes";
+import { buttonStyle } from "styled-system";
+import { useTheme } from "../../themes";
 
-const buttonClassName = css`
+const StyledButton = styled.button`
   border: none;
   padding-left: 32px;
   padding-right: 32px;
@@ -13,25 +13,14 @@ const buttonClassName = css`
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  &:hover: {
+  cursor: pointer;
+  &:hover {
     opacity: 0.6;
   }
+  ${buttonStyle};
 `;
 
-const StyledButton = styled.button`
-  color: ${({ color }) => color};
-  background-color: ${({ backgroundColor }) => backgroundColor};
-`;
-
-export function Button({ onClick, children }) {
-  const {
-    colors: { primary, secondary }
-  } = useTheme();
-
-  const colorMap = { color: primary, backgroundColor: secondary };
-  return (
-    <StyledButton className={buttonClassName} onClick={onClick} {...colorMap}>
-      {children}
-    </StyledButton>
-  );
+export function Button(props) {
+  const theme = useTheme();
+  return <StyledButton theme={theme} variant="primary" {...props} />;
 }
