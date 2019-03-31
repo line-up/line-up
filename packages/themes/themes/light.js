@@ -1,8 +1,10 @@
 import * as baseTheme from "./base";
 const lightTheme = {
-  colors: {
-    primary: "black",
-    secondary: "#f9f9f9"
+  buttons: {
+    primary: {
+      color: baseTheme.colors.white,
+      backgroundColor: baseTheme.colors.black
+    }
   },
   ...baseTheme
 };

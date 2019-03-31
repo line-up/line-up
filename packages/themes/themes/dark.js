@@ -1,9 +1,11 @@
 import * as baseTheme from "./base";
 
 const darkTheme = {
-  colors: {
-    primary: "white",
-    secondary: "black"
+  buttons: {
+    primary: {
+      color: baseTheme.colors.black,
+      backgroundColor: baseTheme.colors.white
+    }
   },
   ...baseTheme
 };
