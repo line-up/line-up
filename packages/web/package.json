@@ -1,10 +1,9 @@
 {
   "name": "@lineup/web",
   "version": "0.0.1",
-  "description": "Web Components",
+  "description": "LineUp Web Components",
   "license": "MIT",
   "main": "index.js",
-  "scripts": {},
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",

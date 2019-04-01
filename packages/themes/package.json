@@ -1,11 +1,9 @@
 {
   "name": "@lineup/themes",
   "version": "0.0.1",
-  "description": "Web Components",
+  "description": "LineUp Theme Utils",
   "license": "MIT",
   "main": "index.js",
-  "scripts": {
-  },
   "peerDependencies": {
     "react": "^16.8.1"
   }
