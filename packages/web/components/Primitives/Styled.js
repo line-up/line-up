@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 import {
   //Base
   space,
@@ -75,10 +75,10 @@ import {
   buttonStyle,
   textStyle,
   colorStyle,
-  variant,
-} from 'styled-system';
+  variant
+} from "styled-system";
 
-export const StyledBase = styled('div')(
+export const StyledBase = styled("div")(
   space,
   width,
   color,
@@ -125,9 +125,9 @@ export const StyledBackground = styled(StyledBase)(
   backgroundRepeat
 );
 
-export const StyledGrid = styled('div')(
+export const StyledGrid = styled("div")(
   {
-    display: 'grid',
+    display: "grid"
   },
   gridGap,
   gridRowGap,
@@ -144,9 +144,9 @@ export const StyledGrid = styled('div')(
   space
 );
 
-export const StyledFlex = styled('div')(
+export const StyledFlex = styled("div")(
   {
-    display: 'flex',
+    display: "flex"
   },
   alignItems,
   justifyContent,
@@ -168,9 +168,9 @@ export const StyledFlex = styled('div')(
   minHeight
 );
 
-export const StyledButton = styled('button')(
+export const StyledButton = styled("button")(
   {
-    cursor: 'pointer',
+    cursor: "pointer"
   },
   borders,
   borderRadius,
@@ -191,7 +191,7 @@ export const StyledButton = styled('button')(
   color
 );
 
-export const StyledText = styled('p')(
+export const StyledText = styled("p")(
   color,
   fontSize,
   fontWeight,
@@ -204,3 +204,5 @@ export const StyledText = styled('p')(
   width,
   maxWidth
 );
+
+export const StyledContainer = styled("div")(color, space, maxWidth);
