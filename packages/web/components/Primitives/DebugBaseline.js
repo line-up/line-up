@@ -20,11 +20,11 @@ const globalStyles = css`
   }
 `;
 
-export function DebugBaseLine({ baseline = 8 }) {
+export function DebugBaseLine({ baseline = 8, show = true }) {
   useEffect(() => {
-    document.body.style.setProperty("--baseline", baseline + "px");
-    document.body.classList.add("show-base-grid");
-  });
+    document.body.style.setProperty("--baseline", `${baseline}px`);
+    document.body.classList.toggle("show-base-grid");
+  }, [show]);
 
   return <Global styles={globalStyles} />;
 }
