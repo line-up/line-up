@@ -200,5 +200,7 @@ export const StyledText = styled('p')(
   lineHeight,
   letterSpacing,
   space,
-  textStyle
+  textStyle,
+  width,
+  maxWidth
 );

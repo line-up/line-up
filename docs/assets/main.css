@@ -1,5 +1,6 @@
 /* reset */
 * {
+  box-sizing: border-box;
   font: inherit;
   line-height: inherit;
 }
@@ -114,8 +115,49 @@ a:visited {
   color: inherit;
 }
 
+/* block */
+address,
+article,
+aside,
+blockquote,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+grid,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+nav,
+ol,
+p,
+pre,
+table,
+tfoot,
+ul,
+video {
+  margin-top: 0;
+  /* margin-bottom: 24px; */
+}
+
+/* first element has no top margin */
+:first-child {
+  margin-top: unset;
+}
+:last-child {
+  margin-bottom: unset;
+}
+
 body {
-  background: purple;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: purple;
   color: white;
   margin: 0;
   padding: 0;
