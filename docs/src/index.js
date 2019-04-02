@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from "react";
-import { render } from "react-dom";
+import React, {Fragment, useState} from 'react';
+import {render} from 'react-dom';
 
 // TODO: Fix workspace link
 import {
@@ -10,14 +10,14 @@ import {
   Flex,
   Heading,
   Text,
-  DebugBaseLine
-} from "../../packages/web";
-import { ThemeProvider, dark, light } from "../../packages/themes";
+  DebugBaseLine,
+} from '../../packages/web';
+import {ThemeProvider, dark, light} from '../../packages/themes';
 
-const themeMap = { dark, light };
+const themeMap = {dark, light};
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
   const [baseline, setBaseline] = useState(true);
   return (
     <Fragment>
@@ -35,8 +35,7 @@ function App() {
           <select
             onChange={ev =>
               console.log(ev.target.value) || setBaseline(ev.target.value)
-            }
-          >
+            }>
             <option value={true}>Show</option>
             <option value={false}>Hide</option>
           </select>
@@ -70,11 +69,10 @@ function App() {
           <Grid
             gridGap="2em"
             gridTemplateColumns={[
-              "repeat(1, 1fr)",
-              "repeat(2, 2fr)",
-              "repeat(3, 3fr)"
-            ]}
-          >
+              'repeat(1, 1fr)',
+              'repeat(2, 2fr)',
+              'repeat(3, 3fr)',
+            ]}>
             <Button variant="primary">My Great Button</Button>
             <Button variant="primary">My Great Button</Button>
             <Button variant="primary">My Great Button</Button>
@@ -88,4 +86,4 @@ function App() {
   );
 }
 
-render(<App />, document.querySelector("#root"));
+render(<App />, document.querySelector('#root'));

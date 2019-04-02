@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Global, css } from "@emotion/core";
+import React, {useEffect} from 'react';
+import {Global, css} from '@emotion/core';
 
 const globalStyles = css`
   .show-base-grid {
@@ -20,10 +20,10 @@ const globalStyles = css`
   }
 `;
 
-export function DebugBaseLine({ baseline = 8, show }) {
+export function DebugBaseLine({baseline = 8, show}) {
   useEffect(() => {
-    document.body.style.setProperty("--baseline", `${baseline}px`);
-    document.body.classList.toggle("show-base-grid");
+    document.body.style.setProperty('--baseline', `${baseline}px`);
+    document.body.classList.toggle('show-base-grid');
   }, [show]);
 
   return <Global styles={globalStyles} />;
