@@ -20,7 +20,7 @@ const globalStyles = css`
   }
 `;
 
-export function DebugBaseLine({ baseline = 8, show = true }) {
+export function DebugBaseLine({ baseline = 8, show }) {
   useEffect(() => {
     document.body.style.setProperty("--baseline", `${baseline}px`);
     document.body.classList.toggle("show-base-grid");

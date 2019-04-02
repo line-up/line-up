@@ -51,7 +51,7 @@ function App() {
             <Heading tag="h2" textStyle="h2">
               Heading 2
             </Heading>
-            <Heading tag="h3" textStyle="h3">
+            <Heading tag="h3" textStyle="h3" mb={3}>
               Heading 3
             </Heading>
             <Heading textStyle="h4" mb={24}>
