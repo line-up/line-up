@@ -60,7 +60,7 @@ function App() {
               <Heading textStyle="h4" mb={24}>
                 Heading 4
               </Heading>
-              <Text maxWidth={8 * 80}>
+              <Text maxWidth={8 * 80} mb={24}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -69,6 +69,9 @@ function App() {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </Text>
+              <Button pl={8 * 5} pr={8 * 5} variant="primary">
+                Button
+              </Button>
               <Image
                 treatment="cover"
                 src="https://source.unsplash.com/random"
