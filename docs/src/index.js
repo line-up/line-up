@@ -30,23 +30,23 @@ function App() {
 
       <ThemeProvider theme={themeMap[theme]}>
         <Page id="page">
-          <Flex alignItems="center">
-            <Text>
-              Theme Select:
-              <select onChange={ev => setTheme(ev.target.value)}>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-              </select>
-            </Text>
-            <Text>
-              Show Baseline Grids:
-              <select onChange={ev => setBaseline(ev.target.value)}>
-                <option value={true}>Show</option>
-                <option value={false}>Hide</option>
-              </select>
-            </Text>
-          </Flex>
           <Container pt={8 * 10} pb={8 * 10}>
+            <Flex alignItems="center">
+              <Text mr={8 * 2}>
+                Theme Select:
+                <select onChange={ev => setTheme(ev.target.value)}>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+                </select>
+              </Text>
+              <Text>
+                Show Baseline Grids:
+                <select onChange={ev => setBaseline(ev.target.value)}>
+                  <option value={true}>Show</option>
+                  <option value={false}>Hide</option>
+                </select>
+              </Text>
+            </Flex>
             <Base pt={8 * 10} mb={8 * 10}>
               <Heading tag="h1" textStyle="h1">
                 Heading 1
