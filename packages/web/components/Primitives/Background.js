@@ -1,8 +1,8 @@
-import React from "react";
-import { StyledBackground } from "./Styled";
-import { useTheme } from "../../../themes";
+import React from 'react';
+import {StyledBackground} from './Styled';
+import {useTheme} from '../../../themes';
 
-export function Background({ url, ...props }) {
+export function Background({url, ...props}) {
   const theme = useTheme();
   return (
     <StyledBackground
