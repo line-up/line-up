@@ -27,24 +27,25 @@ function App() {
     <Fragment>
       <GlobalStyles />
       <DebugBaseLine show={baseline} id="page" />
-      <Flex alignItems="center">
-        <p>
-          Theme Select:
-          <select onChange={ev => setTheme(ev.target.value)}>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </p>
-        <p>
-          Show Baseline Grids:
-          <select onChange={ev => setBaseline(ev.target.value)}>
-            <option value={true}>Show</option>
-            <option value={false}>Hide</option>
-          </select>
-        </p>
-      </Flex>
+
       <ThemeProvider theme={themeMap[theme]}>
         <Page id="page">
+          <Flex alignItems="center">
+            <Text>
+              Theme Select:
+              <select onChange={ev => setTheme(ev.target.value)}>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </Text>
+            <Text>
+              Show Baseline Grids:
+              <select onChange={ev => setBaseline(ev.target.value)}>
+                <option value={true}>Show</option>
+                <option value={false}>Hide</option>
+              </select>
+            </Text>
+          </Flex>
           <Container pt={8 * 10} pb={8 * 10}>
             <Base pt={8 * 10} mb={8 * 10}>
               <Heading tag="h1" textStyle="h1">
@@ -78,7 +79,8 @@ function App() {
             </Base>
             <Grid
               gridGap="4em"
-              gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}>
+              gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}
+            >
               <Base>
                 <Heading textStyle="h4" mb={24}>
                   Heading 4
