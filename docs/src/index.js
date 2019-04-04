@@ -78,8 +78,7 @@ function App() {
             </Base>
             <Grid
               gridGap="4em"
-              gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}
-            >
+              gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}>
               <Base>
                 <Heading textStyle="h4" mb={24}>
                   Heading 4
