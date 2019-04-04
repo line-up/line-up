@@ -10,7 +10,10 @@ import {
   Flex,
   Heading,
   Text,
+  Image,
   DebugBaseLine,
+  GlobalReset,
+  Background,
 } from '../../packages/web';
 import {ThemeProvider, dark, light} from '../../packages/themes';
 
@@ -21,6 +24,7 @@ function App() {
   const [baseline, setBaseline] = useState(true);
   return (
     <Fragment>
+      <GlobalReset />
       <DebugBaseLine show={baseline} />
       <Flex alignItems="center">
         <p>
@@ -32,17 +36,14 @@ function App() {
         </p>
         <p>
           Show Baseline Grids:
-          <select
-            onChange={ev =>
-              console.log(ev.target.value) || setBaseline(ev.target.value)
-            }>
+          <select onChange={ev => setBaseline(ev.target.value)}>
             <option value={true}>Show</option>
             <option value={false}>Hide</option>
           </select>
         </p>
       </Flex>
       <ThemeProvider theme={themeMap[theme]}>
-        <Container>
+        <Container pt={8 * 10} pb={8 * 10}>
           <Base pt={8 * 10} mb={8 * 10}>
             <Heading tag="h1" textStyle="h1">
               Heading 1
@@ -65,20 +66,32 @@ function App() {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Text>
+            <Image
+              treatment="cover"
+              src="https://source.unsplash.com/random"
+              width="100%"
+              height={400}
+              mt={8 * 10}
+              minHeight={8 * 60}
+            />
           </Base>
           <Grid
-            gridGap="2em"
-            gridTemplateColumns={[
-              'repeat(1, 1fr)',
-              'repeat(2, 2fr)',
-              'repeat(3, 3fr)',
-            ]}>
-            <Button variant="primary">My Great Button</Button>
-            <Button variant="primary">My Great Button</Button>
-            <Button variant="primary">My Great Button</Button>
-            <Button variant="primary">My Great Button</Button>
-            <Button variant="primary">My Great Button</Button>
-            <Button variant="primary">My Great Button</Button>
+            gridGap="4em"
+            gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}>
+            <Base>
+              <Heading textStyle="h4" mb={24}>
+                Heading 4
+              </Heading>
+              <Text maxWidth={8 * 80}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Text>
+            </Base>
           </Grid>
         </Container>
       </ThemeProvider>

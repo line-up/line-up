@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { Global, css } from "@emotion/core";
+import React, {useEffect} from 'react';
+import {Global, css} from '@emotion/core';
 
 const globalStyles = css`
-  @import url("https://rsms.me/inter/inter.css");
+  @import url('https://rsms.me/inter/inter.css');
 
   html {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   @supports (font-variation-settings: normal) {
     html {
-      font-family: "Inter var", sans-serif;
+      font-family: 'Inter var', sans-serif;
     }
   }
 
@@ -129,7 +129,7 @@ const globalStyles = css`
   blockquote:after,
   q:before,
   q:after {
-    content: "";
+    content: '';
     content: none;
   }
 

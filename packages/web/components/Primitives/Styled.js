@@ -117,14 +117,6 @@ export const StyledBase = styled('div')(
   borders
 );
 
-export const StyledBackground = styled(StyledBase)(
-  background,
-  backgroundImage,
-  backgroundSize,
-  backgroundPosition,
-  backgroundRepeat
-);
-
 export const StyledGrid = styled('div')(
   {
     display: 'grid',
@@ -206,3 +198,60 @@ export const StyledText = styled('p')(
 );
 
 export const StyledContainer = styled('div')(color, space, maxWidth);
+
+export const StyledImage = styled('img')(
+  space,
+  width,
+  height,
+  maxWidth,
+  maxHeight,
+  position,
+  zIndex,
+  top,
+  right,
+  bottom,
+  left,
+  border,
+  borderTop,
+  borderRight,
+  borderBottom,
+  borderLeft,
+  borderWidth,
+  borderStyle,
+  borderColor,
+  borderRadius,
+  props => ({
+    maxWidth: '100%',
+    objectFit: props.treatment || 'fill',
+  })
+);
+
+export const StyledBackground = styled('div')(
+  space,
+  width,
+  minWidth,
+  maxWidth,
+  height,
+  maxHeight,
+  minHeight,
+  position,
+  zIndex,
+  top,
+  right,
+  bottom,
+  left,
+  border,
+  borderTop,
+  borderRight,
+  borderBottom,
+  borderLeft,
+  borderWidth,
+  borderStyle,
+  borderColor,
+  borderRadius,
+  background,
+  backgroundImage,
+  backgroundSize,
+  backgroundPosition,
+  backgroundRepeat
+);
