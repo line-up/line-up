@@ -5,6 +5,14 @@ const lineHeight = baseTheme.lineHeight;
 const baseline = baseTheme.baseline;
 const darkTheme = {
   ...baseTheme,
+  colors: {
+    white: 'white',
+    blue: 'blue',
+    green: 'green',
+    red: 'red',
+    black: '#222',
+    pageBackground: '#222',
+  },
   buttons: {
     primary: {
       fontSize: baseTheme.fontSizes[1],

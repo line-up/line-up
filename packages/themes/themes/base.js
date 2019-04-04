@@ -17,6 +17,7 @@ export const colors = {
   green: 'green',
   red: 'red',
   black: '#222',
+  pageBackground: '#fff',
 };
 
 export const textStyles = {
