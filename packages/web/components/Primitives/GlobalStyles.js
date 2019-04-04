@@ -24,8 +24,6 @@ const globalStyles = css`
   body {
     font-size: 16px;
     line-height: 24px;
-    background-color: #eee;
-    color: #222;
     margin: 0;
     padding: 0;
   }
@@ -153,6 +151,6 @@ const globalStyles = css`
   }
 `;
 
-export function GlobalReset() {
+export function GlobalStyles() {
   return <Global styles={globalStyles} />;
 }
