@@ -27,7 +27,6 @@ function App() {
     <Fragment>
       <GlobalStyles />
       <DebugBaseLine show={baseline} id="page" />
-
       <ThemeProvider theme={themeMap[theme]}>
         <Page id="page">
           <Container pt={8 * 10} pb={8 * 10}>
@@ -82,8 +81,7 @@ function App() {
             </Base>
             <Grid
               gridGap="4em"
-              gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}
-            >
+              gridTemplateColumns={['repeat(1, 1fr)', 'repeat(2, 2fr)']}>
               <Base>
                 <Heading textStyle="h4" mb={24}>
                   Heading 4
