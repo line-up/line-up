@@ -1,8 +1,18 @@
 import * as baseTheme from './base';
 const colors = baseTheme.colors;
 const fontSizes = baseTheme.fontSizes;
+const lineHeight = baseTheme.lineHeight;
+const baseline = baseTheme.baseline;
 const darkTheme = {
   ...baseTheme,
+  colors: {
+    white: 'white',
+    blue: 'blue',
+    green: 'green',
+    red: 'red',
+    black: '#222',
+    pageBackground: '#222',
+  },
   buttons: {
     primary: {
       fontSize: baseTheme.fontSizes[1],
@@ -20,23 +30,32 @@ const darkTheme = {
   textStyles: {
     h1: {
       color: colors.white,
-      fontSize: fontSizes[6],
+      fontSize: '64px',
+      fontWeight: 'bold',
+      lineHeight: `${lineHeight * 3}px`,
     },
     h2: {
       color: colors.white,
-      fontSize: fontSizes[5],
+      fontSize: '42px',
+      fontWeight: 'bold',
+      lineHeight: `${lineHeight * 2}px`,
     },
     h3: {
       color: colors.white,
-      fontSize: fontSizes[4],
+      fontSize: '30px',
+      fontWeight: 'bold',
+      lineHeight: `${lineHeight * 2}px`,
     },
     h4: {
       color: colors.white,
-      fontSize: fontSizes[3],
+      fontSize: '22px',
+      fontWeight: 'bold',
+      lineHeight: `${lineHeight}px`,
     },
     text: {
       color: colors.white,
-      fontSize: fontSizes[2],
+      fontSize: '16',
+      lineHeight: `${lineHeight}px`,
     },
   },
 };

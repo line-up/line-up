@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyledText} from '../Primitives';
+import {StyledText} from '.';
 import {useTheme} from '../../../themes';
 
 export function Heading({tag = 'h4', ...props}) {
