@@ -4,6 +4,7 @@
 const chalk = require('chalk');
 const glob = require('glob');
 const path = require('path');
+const fs = require('fs');
 const execFileSync = require('child_process').execFileSync;
 
 const mode = process.argv[2] || 'check';
@@ -16,13 +17,9 @@ const prettierCmd = path.resolve(
   __dirname,
   '../../node_modules/.bin/' + prettier
 );
-const defaultOptions = {
-  'bracket-spacing': 'false',
-  'single-quote': 'true',
-  'jsx-bracket-same-line': 'true',
-  'trailing-comma': 'es5',
-  'print-width': 80,
-};
+const prettierConfig = path.resolve(__dirname, '../../.prettierrc');
+const defaultOptions = JSON.parse(fs.readFileSync(prettierConfig, 'utf-8'));
+
 const config = {
   default: {
     patterns: ['packages/**/*.js', 'docs/**/*.js'],
